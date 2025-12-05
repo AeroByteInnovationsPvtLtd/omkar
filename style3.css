@@ -1,0 +1,75 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+/* clearfix for rows, content, header */
+.row::after,
+#content::after,
+#header::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/* header */
+#logo{
+    background-color:red;
+    height:80px;
+    width:24%;
+    float:left;
+}
+#navbar{
+    background-color: blue;
+    height:80px;
+    width:75%;
+    float:right;
+}
+
+/* main layout */
+#content{
+    margin-top: 10px;
+}
+#left-panel{
+    width:24%;
+    height:620px;
+    background-color: rgb(255, 0, 195);
+    float:left;
+}
+#right-panel{
+    width:75%;
+    float:right;
+}
+
+/* big box in top row */
+#big-box{
+    height:300px;
+    width:317px;
+    background-color: yellow;
+    float:left;
+}
+
+/* small pink boxes */
+.grid{
+    width:150px;
+    height:145px;
+    background-color: pink;
+    float:left;
+    margin-bottom:10px;
+}
+
+/* top row pink boxes – space after big box */
+.top-grid{
+    margin-left:20px;
+}
+
+/* bottom row pink boxes – gap between columns */
+.bottom-grid{
+    margin-left:20px;
+    /* margin-left: -10px; */
+}
+
+/* gap between top row and bottom row */
+.bottom-row{
+    margin-top:10px;
+}
