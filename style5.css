@@ -1,0 +1,12 @@
+#icon-bar{
+    width:370px;
+    margin:100px auto;
+}
+#icon-bar > .icon-box{
+    display:inline-block;
+    height:53px;
+    width:56px;
+    border:1px solid gray;
+    background-image: url();
+    background-repeat:no-repeat;
+}
