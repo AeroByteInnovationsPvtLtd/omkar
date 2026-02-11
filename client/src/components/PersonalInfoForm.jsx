@@ -1,7 +1,7 @@
 import { BriefcaseBusiness, Globe, Linkedin, Mail, MapPin, Phone, User } from 'lucide-react'
 import React from 'react'
 
-const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackground }) => {
+const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackground,accentColor, }) => {
 
 
     const handleChange = (filed, value) => {
@@ -14,7 +14,7 @@ const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackgroun
         { key: 'email', label: 'Email Address', icon: Mail, type: 'email', required: true },
         { key: 'phone', label: 'Phone Number', icon: Phone, type: 'tel' },
         { key: 'location', label: 'Location', icon: MapPin, type: 'text' },
-        { key: 'Profession', label: 'Profession', icon: BriefcaseBusiness, type: 'text' },
+        { key: 'profession', label: 'Profession', icon: BriefcaseBusiness, type: 'text' },
         { key: 'linkedin', label: 'LinkedIn Profile', icon: Linkedin, type: 'url' },
         { key: 'website', label: 'Personal Website', icon: Globe, type: 'url' },
     ]
@@ -32,6 +32,7 @@ const PersonalInfoForm = ({ data, onChange, removeBackground, setRemoveBackgroun
                     ) : (
                         <div className='inline-flex items-center gap-2 mt-5 text-slate-600 hover:text-slate-700 cursor-pointer'>
                             <User className='size-10 p-2.5 border rounded-full' />
+                            upload user image
                         </div>
                     )}
                     <input type="file" accept='image/jpeg, image/png' className='hidden' onChange={(e) => handleChange('image', e.target.files[0])} />

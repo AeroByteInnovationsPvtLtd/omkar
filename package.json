@@ -1,0 +1,10 @@
+{
+  "name": "resume-builder",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "server": "npm --prefix ./omkar run server",
+    "client": "npm --prefix ./client run dev",
+    "start": "npm run server"
+  }
+}
