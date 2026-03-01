@@ -1,7 +1,7 @@
 ## 🚀 Live Demo
 https://job-portal-frontend-theta-rosy.vercel.app
 
-# 💼 Job Portal Frontend
+# 💼 Job Portal Frontend (JobVerse)
 
 A modern full-stack Job Portal application built using React, Supabase, and Clerk authentication.
 
