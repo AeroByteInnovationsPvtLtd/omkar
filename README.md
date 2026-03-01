@@ -1,16 +1,67 @@
-# React + Vite
+## 🚀 Live Demo
+https://job-portal-frontend-theta-rosy.vercel.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 💼 Job Portal Frontend
 
-Currently, two official plugins are available:
+A modern full-stack Job Portal application built using React, Supabase, and Clerk authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔐 Authentication
+- Clerk-based authentication
+- Role-based onboarding (Candidate / Recruiter)
+- Protected routes
 
-## Expanding the ESLint configuration
+### 👨‍💼 Recruiter Features
+- Post new jobs
+- Update hiring status (Open / Closed)
+- View applications
+- Manage applicants
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 👨‍🎓 Candidate Features
+- Browse job listings
+- Filter by location and company
+- Save jobs
+- Apply to jobs
+
+### 📄 Job Details
+- Markdown-based requirements
+- Application tracking
+- Real-time status updates
+
+---
+
+## 🛠 Tech Stack
+
+- React + Vite
+- TailwindCSS + ShadCN UI
+- Supabase (Database + RLS)
+- Clerk (Authentication)
+- React Router
+- Markdown Editor
+
+---
+
+## 🔒 Security
+- Supabase Row Level Security (RLS)
+- Secure Clerk authentication
+- Environment variables for sensitive keys
+
+---
+
+## 🧑‍💻 Author
+
+**Omkar Patil**  
+Intern @ AeroByte Innovations  
+
+---
+
+## 📌 Future Improvements
+
+- Resume upload support
+- Real-time notifications
+- Recruiter dashboard analytics
+- Chat between recruiter & candidate
+- Payment integration for premium listings
