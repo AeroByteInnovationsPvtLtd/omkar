@@ -1,65 +1,43 @@
 import { Link } from "react-router-dom";
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  useUser,
-} from "@clerk/clerk-react";
-import { Button } from "./ui/button";
-import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
-  const { user } = useUser();
-
   return (
-    <nav className="py-4 flex justify-between items-center">
-      <Link to="/">
-        <img src="/logo.png" className="h-20" alt="Hirrd Logo" />
-      </Link>
+    <header className="w-full border-b border-gray-800 bg-black/70 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
 
-      <div className="flex gap-8 items-center">
-        <SignedOut>
-          <Link to="/sign-in">
-            <Button variant="outline">
-              Login
-            </Button>
-          </Link>
-        </SignedOut>
+        {/* Logo Section */}
+        <Link to="/" className="flex items-center gap-4">
+          <img
+            src="/logo.png"
+            alt="JobVerse Logo"
+            className="h-14 sm:h-12 object-contain"
+          />
+          {/* <span className="text-2xl font-bold text-white">
+            JobVerse
+          </span> */}
+        </Link>
 
-        <SignedIn>
-          {user?.unsafeMetadata?.role === "recruiter" && (
-            <Link to="/post-job">
-              <Button variant="destructive" className="rounded-full">
-                <PenBox size={20} className="mr-2" />
-                Post a Job
+        {/* Right Section */}
+        <div className="flex items-center gap-6">
+          <SignedOut>
+            <Link to="/sign-in">
+              <Button
+                variant="outline"
+                className="text-white border-gray-600 px-6 hover:bg-white hover:text-black transition"
+              >
+                Login
               </Button>
             </Link>
-          )}
+          </SignedOut>
 
-          <UserButton
-            appearance={{
-              elements: {
-                avatarBox: "w-10 h-10",
-              },
-            }}
-          >
-            <UserButton.MenuItems>
-              <UserButton.Link
-                label="My Jobs"
-                labelIcon={<BriefcaseBusiness size={15} />}
-                href="/my-jobs"
-              />
-              <UserButton.Link
-                label="Saved Jobs"
-                labelIcon={<Heart size={15} />}
-                href="/saved-jobs"
-              />
-              <UserButton.Action label="manageAccount" />
-            </UserButton.MenuItems>
-          </UserButton>
-        </SignedIn>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/" />
+          </SignedIn>
+        </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

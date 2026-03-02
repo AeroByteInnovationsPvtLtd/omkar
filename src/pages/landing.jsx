@@ -20,52 +20,46 @@ const LandingPage = () => {
   return (
     <main className="flex flex-col gap-24 py-16">
 
-      {/* HERO SECTION */}
-      <section className="text-center relative px-6">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="gradient-title font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight">
-            Find Your Dream Job
-          </h1>
+{/* HERO SECTION */}
+<section className="text-center relative px-6">
+  <div className="max-w-5xl mx-auto">
 
-          <div className="flex justify-center items-center gap-4 mt-4">
-            <span className="text-4xl sm:text-6xl font-bold text-white">
-              and get
-            </span>
-            <img
-              src="/logo.png"
-              className="h-16 sm:h-24 lg:h-28"
-              alt="Hirrd Logo"
-            />
-          </div>
+    <h1 className="gradient-title font-extrabold text-5xl sm:text-7xl lg:text-8xl tracking-tight">
+      Find Your Dream Job
+    </h1>
 
-          <p className="text-gray-300 mt-6 text-lg sm:text-xl max-w-2xl mx-auto">
-            Explore thousands of job listings or find the perfect candidate.
-            Your career journey starts here.
-          </p>
+    <h2 className="mt-6 text-2xl sm:text-3xl text-white font-semibold">
+      Build Your Career with <span className="text-blue-400">JobVerse</span>
+    </h2>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
-            <Link to="/jobs">
-              <Button
-                size="xl"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-10 h-14 text-lg rounded-xl shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
-              >
-                Find Jobs
-              </Button>
-            </Link>
+    <p className="text-gray-400 mt-6 text-lg sm:text-xl max-w-2xl mx-auto">
+      Connect. Apply. Get Hired. Your gateway to endless opportunities.
+    </p>
 
-            <Link to="/post-job">
-              <Button
-                size="xl"
-                variant="outline"
-                className="border-gray-400 text-white px-10 h-14 text-lg rounded-xl hover:bg-white hover:text-black transition-all duration-300"
-              >
-                Post a Job
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+    {/* CTA Buttons */}
+    <div className="flex flex-col sm:flex-row gap-6 justify-center mt-10">
+      <Link to="/jobs">
+        <Button
+          size="xl"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-10 h-14 text-lg rounded-xl shadow-xl hover:shadow-blue-500/40 transition-all duration-300"
+        >
+          Find Jobs
+        </Button>
+      </Link>
+
+      <Link to="/post-job">
+        <Button
+          size="xl"
+          variant="outline"
+          className="border-gray-500 text-white px-10 h-14 text-lg rounded-xl hover:bg-white hover:text-black transition-all duration-300"
+        >
+          Post a Job
+        </Button>
+      </Link>
+    </div>
+
+  </div>
+</section>
 
       {/* COMPANY CAROUSEL */}
       <section>
@@ -98,6 +92,7 @@ const LandingPage = () => {
       {/* FEATURE SECTION */}
       <section className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
           <Card className="bg-white/5 backdrop-blur border border-gray-700 text-white hover:scale-105 transition">
             <CardHeader>
               <CardTitle className="font-bold text-xl">
@@ -121,17 +116,28 @@ const LandingPage = () => {
               Simplify your hiring process.
             </CardContent>
           </Card>
+
         </div>
       </section>
 
       {/* BANNER IMAGE */}
-      <section className="max-w-6xl mx-auto px-6">
-        <img
-          src="/banner.jpeg"
-          className="w-full rounded-2xl shadow-2xl"
-          alt="Banner"
-        />
-      </section>
+<section className="max-w-6xl mx-auto px-6 py-20 text-center">
+  <h2 className="text-4xl sm:text-5xl font-bold text-cyan-400">
+    Connect. Apply. Get Hired.
+  </h2>
+
+  <p className="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+    Explore top career opportunities and build your professional network today.
+  </p>
+
+  <div className="mt-12">
+    <img
+      src="/banner.jpeg"
+      alt="Career Network"
+      className="mx-auto max-w-3xl opacity-90"
+    />
+  </div>
+</section>
 
       {/* FAQ SECTION */}
       <section className="max-w-4xl mx-auto px-6">
@@ -148,6 +154,7 @@ const LandingPage = () => {
           ))}
         </Accordion>
       </section>
+
     </main>
   );
 };
