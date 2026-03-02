@@ -11,10 +11,21 @@ import JobListing from "./pages/jobListing";
 import MyJobs from "./pages/my-jobs";
 import SavedJobs from "./pages/saved-jobs";
 import JobPage from "./pages/job";
+import { SignIn } from "@clerk/clerk-react";
 
 import "./App.css";
 
 const router = createBrowserRouter([
+  // Top-level sign-in route rendered outside the AppLayout so it doesn't
+  // inherit the header or background from the rest of the app.
+  {
+    path: "/sign-in",
+    element: (
+      <div className="fixed inset-0 flex items-center justify-center bg-black">
+        <SignIn signUpForceRedirectUrl="/onboarding" fallbackRedirectUrl="/onboarding" />
+      </div>
+    ),
+  },
   {
     element: <AppLayout />,
     children: [

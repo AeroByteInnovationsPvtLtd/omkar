@@ -1,33 +1,10 @@
-import { useEffect, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
-import {
-  SignedIn,
-  SignedOut,
-  UserButton,
-  SignIn,
-  useUser,
-} from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton, useUser } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
 import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
 
 const Header = () => {
-  const [showSignIn, setShowSignIn] = useState(false);
-
-  const [search, setSearch] = useSearchParams();
   const { user } = useUser();
-
-  useEffect(() => {
-    if (search.get("sign-in")) {
-      setShowSignIn(true);
-    }
-  }, [search]);
-
-  const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      setShowSignIn(false);
-      setSearch({});
-    }
-  };
 
   return (
     <>
@@ -38,9 +15,9 @@ const Header = () => {
 
         <div className="flex gap-8">
           <SignedOut>
-            <Button variant="outline" onClick={() => setShowSignIn(true)}>
-              Login
-            </Button>
+            <Link to="/sign-in">
+              <Button variant="outline">Login</Button>
+            </Link>
           </SignedOut>
           <SignedIn>
             {user?.unsafeMetadata?.role === "recruiter" && (
@@ -76,17 +53,7 @@ const Header = () => {
         </div>
       </nav>
 
-      {showSignIn && (
-        <div
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50"
-          onClick={handleOverlayClick}
-        >
-          <SignIn
-            signUpForceRedirectUrl="/onboarding"
-            fallbackRedirectUrl="/onboarding"
-          />
-        </div>
-      )}
+      {/* Sign-in is now a dedicated route at /sign-in */}
     </>
   );
 };
