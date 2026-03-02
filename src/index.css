@@ -82,3 +82,29 @@
     @apply gradient text-transparent bg-clip-text;
   }
 }
+
+/* Clerk provider icon sizing to match large company logos */
+.clerk-provider-button img,
+.clerk-provider-button svg,
+[data-testid="provider-icon"] img,
+[data-testid="provider-icon"] svg {
+  width: 48px !important;
+  height: 48px !important;
+  max-width: 48px !important;
+  max-height: 48px !important;
+  vertical-align: middle;
+}
+
+/* Make provider button content align center and give room */
+.clerk-provider-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.75rem !important;
+  padding: 0.75rem 1.25rem !important;
+}
+
+/* Tighten logo row spacing if needed */
+.trusted-logo-row img {
+  height: 56px;
+  width: auto;
+}
