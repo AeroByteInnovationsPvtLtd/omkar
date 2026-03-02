@@ -1,3 +1,4 @@
+git clone https://github.com/vinayrendla6/CareerRise.git
 🚀 AI Resume Builder
 
 An end-to-end AI-powered Resume Builder application that allows users to create, edit, enhance, download, and share resumes seamlessly.
