@@ -1,88 +1,77 @@
-git clone https://github.com/vinayrendla6/CareerRise.git
-🚀 AI Resume Builder
+# AI Resume Builder
 
-An end-to-end AI-powered Resume Builder application that allows users to create, edit, enhance, download, and share resumes seamlessly.
+AI Resume Builder is a full-stack web application that helps users create professional resumes using an AI-powered system. The platform allows users to enter their information and generate structured resume content through a clean and user-friendly interface.
 
-The project includes a fully functional frontend and backend with stable AI integration.
+The project includes a **React frontend**, **Node.js backend**, and **Swagger API documentation** for easy API testing.
 
-🌐 Live Links
+---
 
-Frontend:
+## 🌐 Live Deployment
+
+Frontend (Vercel)  
 https://ai-project-seven-blush.vercel.app/
 
-Backend API:
+Backend API (Render)  
 https://ai-project-backend-ue9p.onrender.com/
 
-✨ Features
-📝 Resume Management
+---
 
-Create and edit resumes
+## 📑 API Documentation (Swagger)
 
-Upload existing resume data
+Interactive API documentation is available using Swagger UI.
 
-Real-time form updates
+Swagger Documentation:  
+https://ai-project-backend-ue9p.onrender.com/api-docs/
 
-Structured resume sections (Education, Experience, Skills, Projects, etc.)
+Swagger allows developers to:
 
-🤖 AI Integration (Gemini)
+- Test API endpoints directly from the browser
+- View request and response schemas
+- Understand authentication requirements
+- Explore available backend services
 
-AI-powered content enhancement
+---
 
-Generate professional summaries
+## 🚀 Features
 
-Improve job descriptions
+- AI-powered resume generation
+- User authentication system
+- Resume data management
+- RESTful API architecture
+- Swagger API documentation
+- Full-stack deployment (Vercel + Render)
 
-Smart skill suggestions
+---
 
-Stable and tested AI responses
+## 📌 API Endpoints
 
-📄 PDF Export
+| Method | Endpoint | Description |
+|------|------|------|
+| POST | /api/users/register | Register a new user |
+| POST | /api/users/login | Login and receive JWT token |
+| GET | /api/users/data | Get logged-in user profile |
+| GET | /api/users/resumes | Get resumes of logged-in user |
 
-Download resume as high-quality PDF
+---
 
-Clean and professional formatting
+## 🛠 Technologies Used
 
-Print-ready layout
+### Frontend
+- React.js
+- HTML
+- CSS
+- JavaScript
+- Vercel Deployment
 
-🔗 Share Resume
+### Backend
+- Node.js
+- Express.js
+- REST API
+- JWT Authentication
+- Swagger (OpenAPI 3.0)
+- Render Deployment
 
-Generate shareable public link
+---
 
-View resume via unique URL
-
-Easy distribution to recruiters
-
-🛠 Tech Stack
-Frontend
-
-React
-
-Tailwind CSS
-
-Axios
-
-Vercel (Deployment)
-
-Backend
-
-Node.js
-
-Express.js
-
-MongoDB
-
-Gemini AI API
-
-Render (Deployment)
-
-🔌 API Features
-
-Resume CRUD operations
-
-AI content generation endpoints
-
-Resume PDF generation
-
-Public resume sharing endpoint
-
-All APIs are tested and fully functional.
+## 📸 API Documentation Preview
+<img width="1417" height="919" alt="Swagger" src="https://github.com/user-attachments/assets/15b61339-f344-45fd-a649-3996f71ded5c" />
