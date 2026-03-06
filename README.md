@@ -50,6 +50,12 @@ These projects helped me understand how to structure web pages, design responsiv
 ## Project 11
 <img width="1870" height="897" alt="Project11" src="https://github.com/user-attachments/assets/eb80cb6d-8972-43d9-933b-6ac2c94bc49e" />
 
+## Bootstrap
+<img width="1903" height="902" alt="Bootstrap" src="https://github.com/user-attachments/assets/3b21b599-8fc7-4377-b0b6-ef89808e32a0" />
+
+## Flexbox
+<img width="1906" height="905" alt="Flexbox" src="https://github.com/user-attachments/assets/703d6bb6-3e75-4df3-a33c-fefb19dc2e53" />
+
 ---
 
 ## 📚 About the Repository
