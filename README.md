@@ -74,4 +74,8 @@ The files represent small experimental layouts created while practicing front-en
 
 ---
 
-## 📂 Project Structure
+## 👨‍💻 Author
+
+**Omkar Patil**  
+Software Developer Intern  
+Aerobyte Innovations Pvt Ltd
